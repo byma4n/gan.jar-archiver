@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gan.Jar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="logo.png" alt="Gan.Jar Logo" class="app-logo">
+      </header>
+
+      <div class="tabs">
+        <button class="tab-btn active" id="tab-compress">
+          Compress
+        </button>
+        <button class="tab-btn" id="tab-extract">Extract</button>
+      </div>
+
+      <!-- COMPRESS PANEL -->
+      <div id="compress" class="panel active">
+        <div class="form-group">
+          <label>Source (File or Folder)</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="compress-source"
+              readonly
+              placeholder="Select file or folder..."
+            />
+            <button class="btn btn-secondary" id="btn-select-source-file">
+              File
+            </button>
+            <button class="btn btn-secondary" id="btn-select-source-dir">
+              Folder
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" id="btn-compress">
+            Create Archive
+          </button>
+        </div>
+      </div>
+
+      <!-- EXTRACT PANEL -->
+      <div id="extract" class="panel">
+        <div class="form-group">
+          <label>Archive File</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="extract-source"
+              readonly
+              placeholder="Select archive to extract..."
+            />
+            <button class="btn btn-secondary" id="btn-select-archive">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Destination Folder</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="extract-dest"
+              readonly
+              placeholder="Select destination folder..."
+            />
+            <button class="btn btn-secondary" id="btn-select-dest">
+              Select
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" id="btn-extract">
+            Extract Archive
+          </button>
+        </div>
+      </div>
+
+      <div id="status" class="status-message"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

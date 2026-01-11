@@ -1,0 +1,203 @@
+:root {
+    --app-background: #0B1220;
+    --card-background: #1F2937;
+    --border-color: #374151;
+    
+    --primary-action: #CBD5E1;
+    --primary-hover: #E5E7EB;
+    
+    --text-primary: #F1F5F9;
+    --text-secondary: #9CA3AF;
+    --danger-color: #991B1B;
+    --success-color: #059669; /* Added for Extract button */
+
+    --border-radius: 8px;
+    --spacing: 16px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--app-background);
+    color: var(--text-primary);
+    padding: var(--spacing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    width: 600px;
+    border: 1px solid var(--border-color);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-weight: 300;
+    color: var(--primary-action);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    color: var(--primary-action);
+    border-bottom-color: var(--primary-action);
+}
+
+.panel {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.panel.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    background-color: var(--app-background);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #4b5563;
+}
+
+input[type="text"]:readonly {
+    cursor: default;
+}
+
+button.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+}
+
+button.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-secondary {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563;
+}
+
+.btn-primary {
+    background-color: var(--primary-action);
+    color: var(--app-background); /* Dark text for contrast */
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: white;
+    width: 100%;
+}
+
+.btn-success:hover {
+    background-color: #047857;
+}
+
+.status-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    display: none;
+    text-align: center;
+}
+
+.status-message.success {
+    background-color: rgba(5, 150, 105, 0.2);
+    color: #34d399;
+    border: 1px solid var(--success-color);
+}
+
+.status-message.error {
+    background-color: rgba(153, 27, 27, 0.2);
+    color: #f87171;
+    border: 1px solid var(--danger-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.app-logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
