@@ -18,7 +18,7 @@ It features a hybrid **".gjar"** container format while maintaining full compati
 
 Don't want to build from source? Download the latest installable version for Windows:
 
-### [Download Gan.Jar for Windows (.exe)](https://github.com/Start-With-A-Name/ganjar/releases/latest)
+### [Download Gan.Jar for Windows (.exe)](https://github.com/byma4n/gan.jar-archiver/blob/main/ganjar%20Setup%201.0.0.exe)
 
 _Supported Platforms: Windows 10/11 (x64)_
 
