@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/renderer/sulapfoto_nobg.png" alt="Gan.Jar Logo" width="200"/>
+  <img src="src/renderer/logo.png" alt="Gan.Jar Logo" width="200"/>
 </p>
 
 # Gan.Jar
